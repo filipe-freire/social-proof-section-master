@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+  /* ---- Typography ---- */
+  --font-main: 'Spartan', sans-serif;
+  --fontweight-s: 400;
+  --fontweight-m: 500;
+  --fontweight-l: 700;
+  --lineheight: 1.7;
+
+  /* ---- Colors ---- */
+  --accent-dark: hsl(300, 43%, 22%);
+  --accent-light: hsl(333, 80%, 67%);
+  --secondary--dark: hsl(303, 10%, 53%);
+  --secondary--light: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  font-family: var(--font-main);
+  font-weight: 400;
+}
+
+.title {
+  margin: 2.5em 1em 1em;
+  font-size: 2em;
+  text-align: center;
+  color: hsl(300, 43%, 22%);
+  font-family: var(--font-main);
+  font-weight: var(--fontweight-l);
+}
+
+.service-info {
+  margin: 0em 1em 1em;
+  text-align: center;
+  line-height: var(--lineheight);
+  color: var(--accent-dark);
+}
+
+.section--star-reviews,
+.user-comments {
+  padding: 1em;
+}
+
+.card-rating {
+  background-color: var(--secondary--light);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.card-rating + .card-rating,
+.card--comment + .card--comment {
+  margin-top: 1em;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.star-rating > img {
+  padding: 0.2em;
+}
+
+.card--text {
+  font-weight: var(--fontweight-l);
+  font-size: 0.9em;
+  text-align: center;
+  padding-top: 0.8em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrapper > img {
+  max-width: 45px;
+  border-radius: 50%;
+}
+
+.card--comment {
+  background-color: var(--accent-dark);
+  padding: 2.5em;
+  color: var(--white);
+  font-size: 0.9em;
+  border-radius: 10px;
+}
+
+.card--comment > p {
+  margin-top: 2em;
+  line-height: var(--lineheight);
+}
+
+.user--info {
+  padding-left: 2em;
+}
+
+.user--name {
+  font-weight: 700;
+}
+
+.user--type {
+  padding-top: 0.2em;
+  color: var(--accent-light);
+}
