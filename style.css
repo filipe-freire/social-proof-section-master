@@ -32,6 +32,8 @@ html {
 
 body {
   position: relative;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 body::before {
@@ -59,7 +61,7 @@ body::after {
 }
 
 .title {
-  padding: 2.5em 1em 1em;
+  padding: 2.5em 0.5em 1em;
   font-size: 2em;
   text-align: center;
   color: hsl(300, 43%, 22%);
@@ -68,7 +70,7 @@ body::after {
 }
 
 .service-info {
-  margin: 0em 1em 1em;
+  padding: 0em 1em 1em;
   text-align: center;
   line-height: var(--lineheight);
   color: var(--accent-dark);
@@ -148,3 +150,85 @@ body::after {
 .attribution {
   padding: 1em 1em 2em;
 }
+
+@media (min-width: 1440px) {
+  body {
+    min-width: 1440px;
+  }
+
+  body::before {
+    background-image: url('images/bg-pattern-top-desktop.svg');
+  }
+
+  body::after {
+    background-image: url('images/bg-pattern-bottom-desktop.svg');
+  }
+
+  body > :nth-child(1) {
+    padding: 6em 0 2em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header {
+    max-width: 40%;
+  }
+
+  .title {
+    font-size: 3.5em;
+    padding: 15px;
+  }
+
+  .title,
+  .service-info {
+    text-align: left;
+  }
+
+  .section--star-reviews {
+    max-width: 700px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section--star-reviews :nth-child(2) {
+    align-self: center;
+  }
+
+  .section--star-reviews :nth-child(3) {
+    align-self: flex-end;
+  }
+
+  .card-rating {
+    width: 500px;
+  }
+
+  .star-rating > img {
+    padding: 0.3em;
+  }
+
+  .user-comments {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .user-comments :nth-child(2) {
+    align-self: center;
+  }
+
+  .user-comments :nth-child(3) {
+    align-self: flex-end;
+  }
+
+  .card--comment {
+    width: 30%;
+    height: max-content;
+  }
+
+  .card--comment + .card--comment {
+    margin: 0;
+    margin-left: 2em;
+  }
+} ;
