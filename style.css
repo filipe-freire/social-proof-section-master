@@ -30,8 +30,36 @@ html {
   font-weight: 400;
 }
 
+body {
+  position: relative;
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('images/bg-pattern-top-mobile.svg');
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+body::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: calc(100% - 503px);
+  bottom: 0;
+  background-image: url('images/bg-pattern-bottom-mobile.svg');
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 .title {
-  margin: 2.5em 1em 1em;
+  padding: 2.5em 1em 1em;
   font-size: 2em;
   text-align: center;
   color: hsl(300, 43%, 22%);
@@ -115,4 +143,8 @@ html {
 .user--type {
   padding-top: 0.2em;
   color: var(--accent-light);
+}
+
+.attribution {
+  padding: 1em 1em 2em;
 }
